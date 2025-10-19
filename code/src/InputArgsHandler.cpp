@@ -15,6 +15,7 @@ namespace PK_InputArgs
             {
                 std::cerr << "No enough argument given (type --help if needed)" << std::endl;
             }
+            throw std::runtime_error("No enough argument given");
         }
         else if (argc == 6)
         {
@@ -30,6 +31,8 @@ namespace PK_InputArgs
                 std::cerr << "Too many argument given (type --help if needed)" << std::endl;
             else
                 std::cerr << "No enough argument given (type --help if needed)" << std::endl;
+
+            throw std::runtime_error("No enough argument given (type --help if needed)");
         }
     }
 
